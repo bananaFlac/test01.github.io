@@ -1,39 +1,48 @@
-/* test01.css */
-
 /* --------------------------------
- * ページ全体のスタイル
+ * ページ全体のスタイル (ド派手に変更)
  * -------------------------------- */
 body {
-    background-color: #f4f4f4; /* ページの背景色を薄いグレーに */
-    color: #333;             /* ページ全体の基本の文字色を濃いグレーに */
-    font-family: sans-serif;  /* フォントをゴシック体（サンセリフ）に */
+    /* ページの背景色を黒に近い色に変更 */
+    background-color: #111; 
+    /* ページ全体の基本の文字色をネオンカラーに */
+    color: #00ffff;           
+    /* フォントをよりアグレッシブなものに変更 */
+    font-family: 'Arial Black', sans-serif;
+    /* 派手な背景グラデーションを適用（ゆっくり動かす） */
+    background-image: linear-gradient(45deg, #ff00ff, #00ffff, #ffcc00);
+    background-size: 400% 400%;
+    /* 背景アニメーションの適用 */
+    animation: background-move 10s infinite alternate; 
+}
+/* 背景アニメーションの定義 */
+@keyframes background-move {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
 }
 
 /* --------------------------------
- * h1 (一番大きな見出し) のスタイル
+ * h1 (一番大きな見出し) のスタイル (ド派手に変更)
  * -------------------------------- */
 h1 {
-    color: #005a9c;           /* h1の文字色を濃い青に */
-    font-size: 28px;          /* 文字サイズを28ピクセルに */
-    text-align: center;       /* テキストを中央揃えに */
+    /* 文字色を対照的なネオンカラーに */
+    color: #ff00ff;         
+    /* 文字サイズを特大にして強調 */
+    font-size: 50px;         
+    text-align: center;      
+    /* ネオンシャドウ効果を追加 */
+    text-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff, 0 0 20px #00ffff;
+    /* 軽快な揺れアニメーションを追加 */
+    animation: h1-shake 2s infinite alternate; 
+}
+/* h1 アニメーションの定義 */
+@keyframes h1-shake {
+    0% { transform: scale(1) rotate(0deg); }
+    100% { transform: scale(1.05) rotate(1deg); }
 }
 
 /* --------------------------------
- * p (段落) のスタイル
+ * p (段落) のスタイル (ド派手に変更)
  * -------------------------------- */
 p {
-    font-size: 16px;          /* 文字サイズを16ピクセルに */
-    line-height: 1.6;         /* 行の高さをフォントサイズの1.6倍に (読みやすくするため) */
-}
-
-/* --------------------------------
- * a (リンク) のスタイル
- * -------------------------------- */
-a {
-    color: #0077cc;            /* リンクの文字色を青に */
-    text-decoration: none;    /* 下線を消す */
-}
-
-/* リンクにマウスカーソルが乗った時のスタイル */
-a:hover {
-    text-decoration: underline; /* マウスが乗ったら下線
+    font-size: 18px;             /* サイズを少し大きく */
+    line-height
