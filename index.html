@@ -25,47 +25,5 @@
 教育文化施設が充実：動植物園、博物館、図書館など家族向けスポットがある。</p>
     <a href="https://www.city.ichikawa.lg.jp/">市川市公式HP</a>
 
-    <br><br><br>
-    
-    <div style="text-align: center; margin-top: 50px;">
-        <button id="bgm-toggle" style="
-            /* 固定表示（position: fixed）を削除し、通常のフローで表示されるように変更 */
-            background: #ffcc00; /* ド派手な色 */
-            color: #111;
-            border: 2px solid #ff00ff;
-            padding: 10px 15px;
-            cursor: pointer;
-            font-weight: bold;
-            border-radius: 5px;
-            box-shadow: 0 0 10px #ffcc00;
-        ">▶️ BGMを再生</button>
-    </div>
-
-    <script>
-        const bgmPlayer = document.getElementById('bgm-player');
-        const bgmToggle = document.getElementById('bgm-toggle');
-        
-        bgmToggle.addEventListener('click', () => {
-            if (bgmPlayer.muted) {
-                // ミュート解除と再生
-                bgmPlayer.muted = false;
-                bgmPlayer.play(); // 念のためplay()を呼び出す
-                bgmToggle.textContent = '🔊 BGM再生中';
-                bgmToggle.style.background = '#ff00ff';
-                bgmToggle.style.color = '#fff';
-            } else {
-                // ミュート
-                bgmPlayer.muted = true;
-                bgmToggle.textContent = '▶️ BGMを再生';
-                bgmToggle.style.background = '#ffcc00';
-                bgmToggle.style.color = '#111';
-            }
-        });
-        
-        // 自動再生がブロックされた場合でも、ユーザー操作で再生できるようにする
-        bgmPlayer.play().catch(error => {
-            // 自動再生が失敗してもエラーを無視し、ユーザーのクリックを待つ
-        });
-    </script>
 </body>
 </html>
