@@ -4,16 +4,6 @@
  * ページ全体のスタイル
  * -------------------------------- */
 body {
-    {
-    background-image: url("images/background.jpg");
-    /* 画像を繰り返さない */
-    background-repeat: no-repeat; 
-    /* 画像が要素全体を覆うように拡大・縮小 */
-    background-size: cover; 
-    /* 画像を中央に配置 */
-    background-position: center; 
-    /* スクロールしても背景画像を固定する */
-    background-attachment: fixed;
     background-color: #f4f4f4; /* ページの背景色を薄いグレーに */
     color: #333;             /* ページ全体の基本の文字色を濃いグレーに */
     font-family: sans-serif;  /* フォントをゴシック体（サンセリフ）に */
