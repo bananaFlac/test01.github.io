@@ -1,183 +1,28 @@
-/* リセットCSSと基本設定 */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
-    font-family: 'Noto Sans JP', sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #fff;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-/* 共通クラス */
-.container {
-    max-width: 1000px;
+    font-family: sans-serif;
+    max-width: 800px;
     margin: 0 auto;
-    padding: 0 20px;
-}
-
-.section-padding {
-    padding: 60px 0;
-}
-
-.text-center {
-    text-align: center;
-}
-
-.section-title {
-    font-size: 2rem;
-    text-align: center;
-    margin-bottom: 40px;
-    color: #2c3e50;
-    position: relative;
-}
-
-.section-title::after {
-    content: '';
-    display: block;
-    width: 60px;
-    height: 3px;
-    background-color: #3cb371; /* 緑色 */
-    margin: 10px auto 0;
-}
-
-.bg-gray {
-    background-color: #f9f9f9;
-}
-
-/* ヘッダー */
-header {
-    background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-}
-
-header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 70px;
-}
-
-header h1 {
-    font-size: 1.2rem;
-    color: #3cb371;
-}
-
-header nav ul {
-    display: flex;
-    list-style: none;
-}
-
-header nav ul li {
-    margin-left: 20px;
-}
-
-header nav ul li a:hover {
-    color: #3cb371;
-}
-
-/* ヒーローセクション */
-#hero {
-    height: 60vh;
-    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://source.unsplash.com/1600x900/?river,city'); 
-    /* 注: 実際の公開時は自分の画像パスに変更推奨 */
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: #fff;
-    margin-top: 70px;
-}
-
-#hero h2 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-}
-
-/* グリッドレイアウト（カード） */
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-}
-
-.card {
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    overflow: hidden;
-    transition: transform 0.3s;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-}
-
-.card-img {
-    height: 200px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #eee;
-    color: #777;
-    font-size: 0.9rem;
-}
-
-.card-content {
     padding: 20px;
+    background-color: #f4f4f4;
 }
 
-.card-content h3 {
-    margin-bottom: 10px;
+header {
+    text-align: center;
+    background-color: #3cb371; /* 市川っぽい緑 */
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+section {
+    background: white;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+h2 {
     color: #3cb371;
-}
-
-/* 特産品セクション */
-.food-content {
-    background-color: #fff8e1; /* 梨っぽい薄い黄色 */
-    padding: 40px;
-    border-radius: 10px;
-    text-align: center;
-    border: 2px solid #f0e68c;
-}
-
-/* フッター */
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-    font-size: 0.8rem;
-}
-
-/* スマホ用レスポンシブ対応 */
-@media (max-width: 768px) {
-    #hero h2 {
-        font-size: 2rem;
-    }
-    
-    header .container {
-        flex-direction: column;
-        height: auto;
-        padding: 10px;
-    }
-
-    header nav ul {
-        margin-top: 10px;
-    }
+    border-bottom: 2px solid #ddd;
 }
