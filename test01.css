@@ -22,4 +22,186 @@
 }
 
 body {
-    font
+    font-family: 'Noto Sans JP', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+    line-height: 1.8;
+    /* 派手な背景設定：青・紫・緑・オレンジを混ぜた4色のグラデーション */
+    background: linear-gradient(-45deg, #23a6d5, #23d5ab, #e73c7e, #ee7752);
+    background-size: 400% 400%;
+    animation: GradientFlow 15s ease infinite;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* =========================================
+   ラッパー（半透明の白い箱：グラスモーフィズム）
+   ========================================= */
+.wrapper {
+    width: 90%;
+    max-width: 900px;
+    margin: 40px auto;
+    /* 背景を半透明の白に */
+    background: rgba(255, 255, 255, 0.85);
+    /* すりガラス効果（対応ブラウザのみ） */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 50px;
+    /* 強いドロップシャドウで立体感を出す */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+/* =========================================
+   ヘッダー
+   ========================================= */
+header {
+    text-align: center;
+    margin-bottom: 50px;
+    border-bottom: 4px solid transparent;
+    border-image: linear-gradient(to right, #23a6d5, #e73c7e);
+    border-image-slice: 1;
+    padding-bottom: 20px;
+}
+
+header h1 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+    /* 文字自体をグラデーションにする */
+    background: linear-gradient(to right, #0072ff, #ff00cc, #00c6ff);
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: TextShine 3s linear infinite;
+    font-weight: 800;
+}
+
+header p {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #555;
+}
+
+/* =========================================
+   メインコンテンツ
+   ========================================= */
+.content-box {
+    margin-bottom: 60px;
+}
+
+/* 見出しH2のデザイン */
+h2 {
+    font-size: 2rem;
+    position: relative;
+    padding: 10px 20px;
+    background: linear-gradient(90deg, rgba(0, 114, 255, 0.1), transparent);
+    border-left: 8px solid var(--primary-color);
+    color: #2c3e50;
+    letter-spacing: 0.05em;
+    margin-bottom: 30px;
+}
+
+/* テキストの強調 */
+p {
+    font-size: 1.05rem;
+    text-align: justify;
+}
+
+/* =========================================
+   スポット詳細（カード風デザイン）
+   ========================================= */
+.spot-detail {
+    background: #fff;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: all 0.4s ease; /* ホバー時の動きを滑らかに */
+    border-left: 5px solid #ddd;
+}
+
+/* ホバー時の派手なアクション */
+.spot-detail:hover {
+    transform: translateY(-10px) scale(1.02); /* 上に浮き上がり少し拡大 */
+    box-shadow: 0 20px 40px rgba(0, 114, 255, 0.25); /* 青い影を落とす */
+    border-left-color: #e73c7e; /* 左線をピンクに変更 */
+}
+
+.spot-detail h3 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-top: 0;
+    border-bottom: 2px dashed #eee;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+/* =========================================
+   グルメセクション（梨のイメージ）
+   ========================================= */
+.gourmet {
+    background-color: #fffce6; /* 薄い黄色 */
+    padding: 40px;
+    border-radius: 15px;
+    border: 3px solid var(--pear-color);
+    position: relative;
+    overflow: hidden;
+}
+
+/* グルメセクションの背景にうっすら円を配置してポップさを出す */
+.gourmet::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 150px;
+    height: 150px;
+    background: rgba(255, 215, 0, 0.3);
+    border-radius: 50%;
+}
+
+.gourmet h2 {
+    border-left-color: var(--pear-color);
+    background: linear-gradient(90deg, rgba(255, 215, 0, 0.2), transparent);
+    color: #b8860b; /* ダークゴールド */
+}
+
+/* =========================================
+   フッター
+   ========================================= */
+footer {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+/* =========================================
+   スマホ対応
+   ========================================= */
+@media (max-width: 768px) {
+    .wrapper {
+        width: 95%;
+        padding: 25px;
+        margin: 20px auto;
+    }
+    
+    header h1 {
+        font-size: 1.8rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .spot-detail:hover {
+        transform: none; /* スマホでは浮き上がりすぎると押しにくいので無効化 */
+    }
+}
