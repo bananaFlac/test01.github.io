@@ -3,27 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>最強市川物語</title>
-    <link rel="stylesheet" href="test01.css">
-    
-    <audio id="bgm-player" src="bgm/ichikawa_theme.mp3" autoplay loop muted></audio>
-    
+    <title>千葉県市川市の魅力 | 歴史と自然が調和する街</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <h1>市川市のいいところ最強５選</h1>
-    <p>市川のいいところ（簡潔版）
+    <header>
+        <div class="container">
+            <h1>ICHIKAWA CITY GUIDE</h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">市川市とは</a></li>
+                    <li><a href="#spots">おすすめスポット</a></li>
+                    <li><a href="#food">特産品</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-都心へのアクセスが良い：総武線・京葉線・都営新宿線などで東京へ出やすい。
+    <section id="hero">
+        <div class="hero-content">
+            <h2>都心に隣接する<br>水と緑の文化都市</h2>
+            <p>歴史ある寺院、江戸川の自然、そして美しい夜景。<br>市川市の知られざる魅力をご紹介します。</p>
+        </div>
+    </section>
 
-落ち着いた住環境：住宅街が多く、治安も比較的良い。
+    <section id="about" class="container section-padding">
+        <h2 class="section-title">市川市について</h2>
+        <p class="text-center">
+            千葉県の北西部に位置し、江戸川を隔てて東京都と隣接する市川市。<br>
+            万葉集にも詠まれた歴史ある街でありながら、文教都市・住宅都市としても人気があります。<br>
+            都心から電車で約20分というアクセスの良さも魅力の一つです。
+        </p>
+    </section>
 
-自然と歴史が近い：江戸川沿いの散歩道や、国分寺跡・里見公園など歴史スポットが豊富。
+    <section id="spots" class="bg-gray section-padding">
+        <div class="container">
+            <h2 class="section-title">魅力的なスポット</h2>
+            <div class="grid">
+                
+                <div class="card">
+                    <div class="card-img" style="background-color: #ddd;">
+                        <span class="placeholder">展望台からの景色</span>
+                    </div>
+                    <div class="card-content">
+                        <h3>アイ・リンクタウン展望施設</h3>
+                        <p>地上150mから東京スカイツリーや富士山を一望できる絶景スポット。「日本の夜景100選」にも選ばれています。なんと入場は無料です。</p>
+                    </div>
+                </div>
 
-商業施設が便利：市川駅・本八幡駅周辺に買い物場所が多い。
+                <div class="card">
+                    <div class="card-img" style="background-color: #ccc;">
+                        <span class="placeholder">法華経寺の五重塔</span>
+                    </div>
+                    <div class="card-content">
+                        <h3>中山法華経寺</h3>
+                        <p>鎌倉時代に開かれた日蓮宗の大本山。国指定重要文化財の五重塔や祖師堂など、荘厳な建築物は必見です。春には桜の名所としても賑わいます。</p>
+                    </div>
+                </div>
 
-教育文化施設が充実：動植物園、博物館、図書館など家族向けスポットがある。</p>
-    <a href="https://www.city.ichikawa.lg.jp/">市川市公式HP</a>
+                <div class="card">
+                    <div class="card-img" style="background-color: #bbb;">
+                        <span class="placeholder">里見公園のバラ</span>
+                    </div>
+                    <div class="card-content">
+                        <h3>里見公園</h3>
+                        <p>国府台城跡にある西洋庭園のような公園。特にバラ園が有名で、春と秋には色とりどりのバラが咲き誇り、噴水と共に美しい景観を作り出します。</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="food" class="container section-padding">
+        <h2 class="section-title">市川の特産品「市川の梨」</h2>
+        <div class="food-content">
+            <div class="food-text">
+                <h3>地域ブランド認定の極上の味</h3>
+                <p>市川市は梨の産出額がトップクラス。「市川の梨」は地域団体商標にも登録されています。直売所が並ぶ「大町梨街道」は夏の風物詩。甘くて瑞々しい梨は贈答品としても大人気です。</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Ichikawa City Charm Introduction. All Rights Reserved.</p>
+    </footer>
 
 </body>
 </html>
